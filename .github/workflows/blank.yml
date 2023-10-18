@@ -1,0 +1,31 @@
+name: Despliegue en GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del Código
+        uses: actions/checkout@v2
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Instalar Dependencias
+        run: npm install
+
+      - name: Compilar la Aplicación
+        run: npm build
+
+      - name: Desplegar en GitHub Pages
+        run: |
+          git config --global user.email "deploy-bot@example.com"
+          git config --global user.name "GitHub Actions Deploy Bot"
+          git subtree push --prefix dist origin gh-pages
