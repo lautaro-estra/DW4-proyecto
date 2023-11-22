@@ -12,6 +12,7 @@ solucion-digital-ventas/
 ├── package.json
 ├── package-lock.json
 ├── public/
+| ├──e-comerce
 │ ├── index.html
 │ ├── styles.css
 ├── views/
