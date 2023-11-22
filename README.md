@@ -90,7 +90,10 @@ A continuación, se detallan los pasos para instalar y ejecutar la aplicación:
 
 4. Ejecuta el siguiente comando para instalar las dependencias:
 
+   
+```
 npm install
+```
 
 ## Ejecución de la Aplicación
 
@@ -98,8 +101,9 @@ Para ejecutar la aplicación, sigue estos pasos:
 
 1. Una vez que las dependencias estén instaladas, ejecuta la aplicación con el siguiente comando:
 
+```
 npm start
-
+```
 
 2. La aplicación estará disponible en [http://localhost:3000](http://localhost:3000).
 
