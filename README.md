@@ -8,20 +8,56 @@ La estructura de directorio del proyecto se organiza de la siguiente manera:
 
 ```
 solucion-digital-ventas/
-├── app.js
-├── package.json
-├── package-lock.json
-├── public/
-| ├──e-comerce
-│ ├── index.html
-│ ├── styles.css
-├── views/
-│ ├── home.ejs
-├── routes/
-│ ├── index.js
 ├── controllers/
-│ ├── mainController.js
-├── node_modules/ (generado después de la instalación de las dependencias)
+│   └── mainController.js
+├── public/
+│   ├── e-commerce/
+│   │   ├── public/
+│   │   │   ├── favicon.ico
+│   │   │   ├── index.html
+│   │   │   ├── logo192.png
+│   │   │   ├── logo512.png
+│   │   │   ├── manifest.json
+│   │   │   └── robots.txt
+│   │   ├── .gitignore
+│   │   ├── tailwind.config.js
+│   │   ├── index.html
+│   │   └── style.css
+├── routes/
+│   └── index.js
+├── src/
+│   ├── components/
+│   │   ├── Home/
+│   │   │   ├── Home.css
+│   │   │   └── Home.js
+│   │   ├── MainSection/
+│   │   │   ├── MainSection.css
+│   │   │   └── MainSection.js
+│   │   ├── Navbar/
+│   │   │   ├── Navbar.css
+│   │   │   └── Navbar.js
+│   │   └── Carousel.js
+│   ├── img/
+│   │   ├── background.png
+│   │   ├── bt_add_to_caart.svg
+│   │   ├── icon_close.png
+│   │   ├── icon_transparent.png
+│   │   └── logo.png
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+│   └── setupTest.js
+├── views/
+│   └── home.ejs
+├── .gitignore
+├── app.js
+├── index.html
+├── package-lock.json
+└── package.json
 
 ```
 
