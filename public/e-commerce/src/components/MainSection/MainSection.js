@@ -1,5 +1,5 @@
-// src/components/MainSection/MainSection.tsx
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import './MainSection.css';
 import btnAdd from '../../img/bt_add_to_cart.svg';
 import iconClose from '../../img/icon_close.png'
@@ -9,22 +9,20 @@ import { MagicMotion } from 'react-magic-motion';
 const MainSection = ({onReset,onIncrement,onDecrement,cartOpen}) => {
   const [cartItems, setCartItems] = useState([]);
   const [message, setMessage] = useState('Tu carrito está vacío');
+  const [productos, setProductos] = useState([]);
 
-  const infoProductos = [
+  useEffect(() => {
     
-    {
-        name : 'Coca-Cola',
-        model: '2L',
-        price : 1500,
-        brand : 'Coca-Cola',
-        stock : 34,
-        id : 0,
-        img:"https://mayorista.flowmarket.com.ar/659/coca-cola-225lt-regular.jpg"
-    },
-    
-    
-    
-  ];
+    fetch('http://localhost:3000/productos')
+      .then(response => response.json())
+      .then(data => {
+       
+        setProductos(data);
+      })
+      .catch(error => console.error('Error:', error));
+  }, []); 
+
+  
 
   
 
@@ -49,7 +47,7 @@ const MainSection = ({onReset,onIncrement,onDecrement,cartOpen}) => {
       <section id="side-productos">
         <h2>Titulo</h2>
         <div className="list-product">
-          {infoProductos.map((product) => (
+          {productos.map((product) => (
             
               
               <div key={product.id} className="box-product" >
